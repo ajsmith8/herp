@@ -1,0 +1,19 @@
+<span id="upvoting_<%=@subtopic.id%>" class="stat">
+	<%= form_for current_user.scorings.build(topic_id: @subtopic.id), remote: true do |f| %>
+	<div class="field">  
+		<%= f.hidden_field :topic_id, value: @subtopic.id %>
+		<%= f.hidden_field :user_id, value: current_user.id %>
+		<%= f.hidden_field :vote, value: 1 %>
+	</div>
+	<div class="upvotebutton">
+		<% temp1 = Scoring.where(topic_id: @subtopic.id, user_id: current_user.id).first %>
+		<% if temp1.nil?%>
+			<%= f.submit "+1", type: :image, src: "/assets/upvote.png", width: "16", height: "14" %>
+		<% elsif temp1.vote > 0 %>
+			<%= f.submit "+1", type: :image, src: "/assets/upvoted.png", width: "16", height: "14" %>
+		<% else %>
+			<%= f.submit "+1", type: :image, src: "/assets/upvote.png", width: "16", height: "14" %>
+		<% end %>
+	</div>
+	<% end %>
+</span>

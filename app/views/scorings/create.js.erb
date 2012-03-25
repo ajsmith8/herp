@@ -1,0 +1,6 @@
+<% @nestedtopics.each do |topic| %>
+		$("#scoring_<%= topic.id%>").html('<%= "#{topic.score} " %>')
+		<% @subtopic = topic %>
+		$("#upvoting_<%= topic.id%>").html("<%= escape_javascript(render('shared/upvote_form')) %>")
+		$("#downvoting_<%= topic.id%>").html("<%= escape_javascript(render('shared/downvote_form')) %>")
+<% end %>

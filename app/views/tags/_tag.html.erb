@@ -1,0 +1,7 @@
+<div class = topic-odd >
+  <%= link_to tag.content, tag %>
+  <% if current_user.admin? %>
+  || || <%= link_to "delete tag", tag, method: :delete, confirm: "You sure?", 
+							       title: tag.content %>							
+  <% end %>		
+</div>

@@ -1,0 +1,16 @@
+<%= form_for @suggestededit do |f| %>
+  <div class="topictitleeditfield">
+    <%= f.text_area :suggestion, value:@topic.content %>
+		<%= f.hidden_field :url, value: @topic.url%>
+		<%= f.hidden_field :topic_id, value: @topic.id%>
+		<%= f.hidden_field :existing_content, value: @topic.content%>
+		<%= f.hidden_field :ancestry, value: @topic.ancestry%>
+  </div>
+
+  <div class="submitedit">	   
+		<%= f.submit "Suggest Title Edit", type: :image, src: "/assets/rails.png", width: "25", height: "18" %>	
+  </div>
+
+  <div class = "canceltopicedit"><u><b>Cancel</b></u></div>
+
+<% end %>

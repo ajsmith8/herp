@@ -1,0 +1,6 @@
+<% @nestedcomments.each do |comment| %>
+		$("#commentscoring_<%= comment.id%>").html('<%= "#{comment.score} " %>')
+		<% @comment = comment %>
+		$("#commentupvoting_<%= comment.id%>").html("<%= escape_javascript(render('shared/upvote_comment_form')) %>")
+		$("#commentdownvoting_<%= comment.id%>").html("<%= escape_javascript(render('shared/downvote_comment_form')) %>")
+<% end %>

@@ -1,0 +1,15 @@
+<div class = pagetitle>
+	<%= @title %> 
+</div>
+
+<div class="topicindex">
+		<% @topics.each do |i| %>
+			<div class="topicindexitem">
+				<%= link_to i.content, i %>
+			</div>
+		<% end %>
+	
+	<div class="sidebar round">
+		<%= render 'shared/topic_form'%>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<h1>Topics tagged with "<%= @tag.content%>"</h1>
+
+<table class= "tags" summary="all tags">
+	<% @temp.each do |i| %>
+		<tr>
+			<td class="tag-<%= cycle("odd", "even") %>">
+			<%= link_to Topic.find_by_id(i.topic_id).content, Topic.find_by_id(i.topic_id) %>	
+			</td>
+		</tr>				
+	<% end %>
+</table>

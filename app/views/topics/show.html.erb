@@ -1,0 +1,276 @@
+<div class="maintopicview">
+	<div class="backtonav">  
+		<% if !@topic.parent.nil?%>
+			<p> <b>Back to:</b> <%= link_to @link, @parent %> </p>
+		<% else %>
+			<p> <b>Back to:</b> <%= link_to "Topic List", topics_path %> </p>
+		<% end %>
+	</div>
+	
+	<div class="maintopicheader">    
+
+		<div class = "topictitlecontainer">
+			<a class = "topicsuggesteditformcontainer" style="display: none;"><%= render 'shared/suggest_edit_topic_title_form' %></a>
+			<a class = "topiceditformcontainer" style="display:none;"><%= render 'shared/edit_topic_title_form'%> </a>
+			<p class ="titletext"><%= @topic.content %> </p>
+		</div>
+
+		<div class = "placeholderfordesc">
+			<% mainauthor = User.find_by_id(@topic.user_id)%>
+			<p class = "showmaintopicauthor"><b>Posted by: <u></b><%=link_to mainauthor.name, mainauthor %></u></p>
+			<% unless current_user.nil? %>
+				<% if current_user.admin? || current_user.id == @topic.user_id %>	
+					<a class = "showtopiceditform"><u><b>Edit: </b>Topic Title</u></a>
+				<% else %>
+				  <a class = "showsuggesttopiceditform"><u><b>Suggest Edit: </b>Topic Title</u></a>
+				<% end %>
+				<% if current_user.admin? || (current_user.id == @topic.user_id && @topic.children.empty?) %>	
+					<p class = "showtopicdelete"><b><u><%=link_to "Delete Topic", @topic, method: :delete, confirm: "You sure?", title: @topic.content %></u></b></p>
+				<% end %>
+			<% end %>
+		</div>
+
+		<div class = "topicdescription">
+			<a class="edittopicdescription" style="display: none"> <%= render 'shared/edit_topicdesc_form'%></a>
+			<a class="newtopicdescription" style="display: none"> <%= render 'shared/new_topicdesc_form'%></a>
+			<% if @topic.description.present? %>
+				<a class="show"><b>View:</b> Topic Description</a>
+			<% else %>
+				<a class="shownewdesc"><b>Create:</b> Topic Description</a>
+			<% end %>			
+				<a class="hide" style="display: none;"><b>Hide:</b> Topic Description</a>	
+			<div class="topicdescriptiontext" style="display: none;">
+				<p><%=@topic.description%></p>	
+				<% if signed_in? %>
+					<a class="showdescedit"><b>Edit:</b> Topic Description</a> 
+				<% end %>
+			</div>
+		</div>
+	</div>					
+
+	<div class = "argscontainer">
+		<div class = "proargscontainer"> 			
+			<div class = "argheader">
+				<p>Supporting Reasons:</p>
+			</div>
+			<% x = 0 %>
+			<div class = "highrankproargs">	
+				<% @proargs.each do |i| %>
+					<% x += 1 %>
+					<% break if x == 6 %>
+					<div class="argtopicitem-<%= cycle("odd", "even") %>">
+						<%= render i %>
+					</div>	
+				<% end %>	
+			</div>	
+			<div class = "showlowrankproargs" >
+				<% if @proargs.count > 5 %>
+					<% if @proargs.count > 6%>
+						<p><span class='dark'><b>Show:</b></span> <u>Next <b><%= @proargs.count-5 %></b> Reasons</u></p>
+					<% else %>
+						<p><span class='dark'><b>Show:</b></span> <u>Next Reason</u></p>
+					<% end %>
+				<% end %>
+			</div>
+			<div class = "postnewproarg">
+				<p><span class = 'dark'><b>Post: </span></b><u>New Reason</u></p>
+			</div>
+			<div class = "hidenewproarg", style="display: none;">
+				<p><span class = 'dark'><b>Cancel: </span></b><u>New Reason</u></p>
+			</div>
+			<div class = "hidelowrankproargs", style="display: none;">	
+				<% if @proargs.count > 6%>
+					<p><span class = 'dark'><b>Hide:</span></b> <u>Next <b><%= @proargs.count-5 %></b> Reasons</u></p>
+				<% else %>
+					<p><span class = 'dark'><b>Hide:</span></b> <u>Next Reason</u></p>
+				<% end %>
+			</div>
+			<div class = "newproarg" style="display:none;">
+				<a class = "newproargform"><%= render 'shared/pro_form'%> </a>
+			</div>
+			<div class = "lowrankproargs" style="display:none;">
+				<% x = 0 %>
+				<% @proargs.each do |i| %>
+					<% x += 1%>
+					<% if x > 5 %>	
+						<div class="argtopicitem-<%= cycle("odd", "even") %>">
+							<%= render i %>
+						</div>
+					<% end %>	
+				<% end %>
+			</div>	
+		</div>		
+		
+		<div class = "conargscontainer">  
+			<div class = "argheader">
+				<p>Opposing Reasons:</p>
+			</div>
+			<% x = 0 %>
+			<div class = "highrankconargs">	
+				<% @conargs.each do |i| %>
+					<% x += 1 %>
+					<% break if x == 6 %>
+					<div class="argtopicitem-<%= cycle("odd", "even") %>">
+						<%= render i %>
+					</div>	
+				<% end %>	
+			</div>	
+			<div class = "showlowrankconargs" >
+				<% if @conargs.count > 5 %>
+					<% if @conargs.count > 6%>
+						<p><span class='dark'><b>Show:</b></span> <u>Next <b><%= @conargs.count-5 %></b> Reasons</u></p>
+					<% else %>
+						<p><span class='dark'><b>Show:</b></span> <u>Next Reason</u></p>
+					<% end %>
+				<% end %>
+			</div>
+			<div class = "postnewconarg">
+				<p><span class = 'dark'><b>Post: </span></b><u>New Reason</u></p>
+			</div>
+			<div class = "hidenewconarg", style="display: none;">
+				<p><span class = 'dark'><b>Cancel: </span></b><u>New Reason</u></p>
+			</div>
+			<div class = "hidelowrankconargs", style="display: none;">	
+				<% if @conargs.count > 6%>
+					<p><span class = 'dark'><b>Hide:</span></b> <u>Next <b><%= @conargs.count-5 %></b> Reasons</u></p>
+				<% else %>
+					<p><span class = 'dark'><b>Hide:</span></b> <u>Next Reason</u></p>
+				<% end %>
+			</div>
+			<div class = "newconarg" style="display:none;">
+				<a class = "newconargform"><%= render 'shared/con_form'%> </a>
+			</div>
+			<div class = "lowrankconargs" style="display:none;">
+				<% x = 0 %>
+				<% @conargs.each do |i| %>
+					<% x += 1%>
+					<% if x > 5 %>	
+						<div class="argtopicitem-<%= cycle("odd", "even") %>">
+							<%= render i %>
+						</div>
+					<% end %>	
+				<% end %>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "commentscontainer">				
+		<div class = "procommentscontainer">
+			<div class = "commentheader">
+				<p> Supporting Comments: </p>
+			</div>
+			<% x = 0 %>
+			<div class = "highrankprocomments">	
+				<% @procomments.each do |i| %>
+					<% x += 1 %>
+					<% break if x == 6 %>
+					<div class="commentitem-<%= cycle("odd", "even") %>">
+						<%= render i %>
+					</div>	
+				<% end %>	
+			</div>
+			<div class = "showlowrankprocomments" >
+				<% if @procomments.count > 5 %>
+					<% if @procomments.count > 6%>
+						<p><span class='dark'><b>Show:</b></span> <u>Next <b><%= @procomments.count-5 %></b> Comments</u></p>
+					<% else %>
+						<p><span class='dark'><b>Show:</b></span> <u>Next Comment</u></p>
+					<% end %>
+				<% end %>
+			</div>
+			<div class = "postnewprocomment">
+				<p><span class = 'dark'><b>Post: </span></b><u>New <b>Supportive</b> Comment</u></p>
+			</div>
+			<div class = "hidenewprocomment", style="display: none;">
+				<p><span class = 'dark'><b>Cancel: </span></b><u>New <b>Supportive</b> Comment</u></p>
+			</div>
+			<div class = "hidelowrankprocomments", style="display: none;">	
+				<% if @procomments.count > 6%>
+					<p><span class = 'dark'><b>Hide:</span></b> <u>Next <b><%= @procomments.count-5 %></b> Comments</u></p>
+				<% else %>
+					<p><span class = 'dark'><b>Hide:</span></b> <u>Next Comment</u></p>
+				<% end %>
+			</div>
+			<div class = "newprocomment" style="display:none;">
+				<a class = "newprocommentform"><%= render 'shared/pro_comment_form'%> </a>
+			</div>
+			<div class = "lowrankprocomments" style="display:none;">
+				<% x = 0 %>
+				<% @procomments.each do |i| %>
+					<% x += 1%>
+					<% if x > 5 %>	
+						<div class="commentitem-<%= cycle("odd", "even") %>">
+							<%= render i %>
+						</div>
+					<% end %>	
+				<% end %>
+			</div>
+		</div>
+		
+		<div class = "concommentscontainer">
+			<div class = "commentheader">
+				<p> Opposing Comments: </p>
+			</div>
+			<% x = 0 %>
+			<div class = "highrankconcomments">	
+				<% @concomments.each do |i| %>
+					<% x += 1 %>
+					<% break if x == 6 %>
+					<div class="commentitem-<%= cycle("odd", "even") %>">
+						<%= render i %>
+					</div>	
+				<% end %>	
+			</div>
+			<div class = "showlowrankconcomments" >
+				<% if @concomments.count > 5 %>
+					<% if @concomments.count > 6%>
+						<p><span class='dark'><b>Show:</b></span> <u>Next <b><%= @concomments.count-5 %></b> Comments</u></p>
+					<% else %>
+						<p><span class='dark'><b>Show:</b></span> <u>Next Comment</u></p>
+					<% end %>
+				<% end %>
+			</div>
+			<div class = "postnewconcomment">
+				<p><span class = 'dark'><b>Post: </span></b><u>New <b>Opposing</b> Comment</u></p>
+			</div>
+			<div class = "hidenewconcomment", style="display: none;">
+				<p><span class = 'dark'><b>Cancel: </span></b><u>New <b>Opposing</b> Comment</u></p>
+			</div>
+			<div class = "hidelowrankconcomments", style="display: none;">	
+				<% if @concomments.count > 6%>
+					<p><span class = 'dark'><b>Hide:</span></b> <u>Next <b><%= @concomments.count-5 %></b> Comments</u></p>
+				<% else %>
+					<p><span class = 'dark'><b>Hide:</span></b> <u>Next Comment</u></p>
+				<% end %>
+			</div>
+			<div class = "newconcomment" style="display:none;">
+				<a class = "newconcommentform"><%= render 'shared/con_comment_form'%> </a>
+			</div>
+			<div class = "lowrankconcomments" style="display:none;">
+				<% x = 0 %>
+				<% @concomments.each do |i| %>
+					<% x += 1%>
+					<% if x > 5 %>	
+						<div class="commentitem-<%= cycle("odd", "even") %>">
+							<%= render i %>
+						</div>
+					<% end %>	
+				<% end %>
+			</div>	
+		</div>
+	</div>
+</div>
+<div class = "maintopicsidebar">
+	<div class = "suggestioncontainer">
+		<% if @topicsuggestions.empty? %>
+			<%= @notopics %>
+		<% else %>
+			<% @topicsuggestions.each do |i| %>
+				<div class = "suggestionitem">
+					<%= link_to i.content, i %>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
+	<%= @herr %>
+</div>

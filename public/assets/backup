@@ -1,0 +1,48 @@
+.container {
+	font-family: arial;
+}
+
+nav {
+  float: right;
+  background: #dca4ac;
+  padding: 0 0.2em 0 0;
+  white-space: nowrap;
+}
+
+h1 {
+	float: left;
+}
+
+nav ul li {
+	list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0.4em;
+	font-family: arial;
+}
+
+nav ul li a:link {
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+.bookmark-odd a {
+	color: #dca4ac;
+	text-align: center;	
+}
+
+.bookmark-odd a:link {
+	text-decoration: none;
+}
+
+.topic-odd a {
+	color: #dca4ac;
+	text-align: center;	
+}

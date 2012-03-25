@@ -1,0 +1,7 @@
+<%= form_for current_user.scorings.build(topic_id: topic.id), remote: true do |f| %>
+<div class="field">  
+	<%= f.hidden_field :topic_id, value: topic.id %>
+	<%= f.hidden_field :user_id, value: current_user.id %>
+</div>
+  <div class="actions"><%= f.submit "Upvote" %></div>
+<% end %>

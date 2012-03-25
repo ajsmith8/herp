@@ -1,0 +1,13 @@
+<h1>Add Tag</h1>
+
+<%= form_for(@tag) do |f| %>
+  <% hidden_field :topic_id, value: @topic.id %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>

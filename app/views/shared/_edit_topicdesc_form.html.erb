@@ -1,0 +1,11 @@
+<%= form_for @topic do |f| %>
+  <div class="topicdesceditfield">
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="submitedit">	   
+		<%= f.submit "Edit Description", type: :image, src: "/assets/rails.png", width: "25", height: "18" %>	
+  </div>
+
+  <div class = "canceltopicdescedit"><u><b>Cancel</b></u></div>
+<% end %>

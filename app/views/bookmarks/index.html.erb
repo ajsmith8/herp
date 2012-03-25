@@ -1,0 +1,11 @@
+<h1>Your Bookmarks</h1>
+
+<table class= "bookmarks" summary="all bookmarks">
+	<% @topics.each do |i|  %>
+		<tr>
+			<td class="bookmark-<%= cycle("odd", "even") %>"> 
+				<%= link_to i.content, i %>
+			</td>
+		</tr>
+	<% end %>
+</table>

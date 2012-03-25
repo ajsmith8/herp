@@ -1,0 +1,9 @@
+<%= form_for(@topic) do |f| %>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content, data: {autocomplete_source: topics_path} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

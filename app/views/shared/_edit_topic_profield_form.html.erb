@@ -1,0 +1,11 @@
+<%= form_for @topic do |f| %>
+  <div class="fieldeditfield">
+    <%= f.text_area :pro_fieldname %>
+  </div>
+
+  <div class="submitedit">	   
+		<%= f.submit "Edit Profieldname", type: :image, src: "/assets/rails.png", width: "25", height: "18" %>	
+  </div>
+
+	<div class = "canceltopicedit"><u><b>Cancel</b></u></div>
+<% end %>

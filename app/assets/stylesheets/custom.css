@@ -1,0 +1,1225 @@
+.container {
+	font-family: arial;
+	width: 975px;
+	margin: -8px auto;
+	font-size: 85%;
+}
+/* Page Title Headers */
+.pagetitle {
+	border: 1px solid #dca4ac;
+	width: 235px;
+	padding: 3px 0 3px 17px;
+}
+/* Header */
+.fusegap {
+	float: left;
+	width: 120px;
+	padding: 17px 0 0 0;
+	border-right: 3px solid #d0d0d0;
+	height: 17px;
+	margin: 2px 0 0 0;
+}
+.fusegap p {
+	margin: -12px 0 0 21px;
+	font-weight: bold;
+	font-size: 150%;
+	color: #d0d0d0;
+}
+.fusegap p a:link {
+	text-decoration: none;
+	color: #c8c8c8;
+}
+.fusegap p a:visited {
+	text-decoration: none;
+	color: #c8c8c8;
+}
+.fusegap p a:hover {
+  color: #fff;
+}
+.siteheader {
+	width: 973px;
+	height: 39px;
+	background: #484848;
+}
+.headerlinks {
+  float: right;
+	height: 40px;
+  padding: 0 5px 0 0;
+}
+.headerlinks ul {
+	margin: 11px 0 0 -30px;	
+}
+.headerlinks ul li {
+	list-style-type: none;
+  display: inline-block;
+  padding: 0 0.4em;
+	font-weight: bold;
+}
+.headerlinks ul li a:link {
+	text-decoration: none;
+	color: #c8c8c8;
+}
+.headerlinks ul li a:visited {
+	text-decoration: none;
+	color: #c8c8c8;
+}
+.headerlinks ul li a:hover {
+  color: #fff;
+}
+/* Topic Index */
+.topicindex {
+	width: 550px;
+	min-height: 500px;
+	padding: 6px 0 0 0;
+}
+.topicindexitem {
+	width: 450px;
+	padding: 2px 0 3px 5px;
+	margin: 0 0 0 2px;
+}
+.topicindexitem a {
+	color: #000;
+}
+.topicindexitem a:before {
+	content: '\25CF  ';
+}
+.topicindexitem a:link {
+	text-decoration: none;
+}
+.topicindexitem a:visited {
+	text-decoration: none;
+}
+.topicindexitem a:hover {
+  color: #a9f97a;
+}
+/* Main Topic View */
+.maintopicview {
+	width: 695px;
+	min-height: 500px;
+	padding: 14px 0 0 0;
+	margin-left: 0;
+	float: left;
+	border-right: 2px solid #d0d0d0;
+}
+.maintopicheader {
+	width: 690px;
+	min-height: 30px;
+	float: left;
+	margin: 0 0 0 3px;
+}
+.topicdescription {
+	float: left;
+	width: 670px;
+	min-height: 10px;
+	margin: -2px 0 3px 12px;
+	color: #787878;
+}
+.topicdescription .show {
+	display: block;
+	margin: 0 auto;
+	width: 130px;
+	font-size: 85%;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.topicdescription .shownewdesc {
+	display: block;
+	margin: 0 auto;
+	width: 144px;
+	font-size: 85%;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.topicdescription .hide {
+	display: block;
+	margin: 0 auto;
+	width: 130px;
+	font-size: 85%;
+	text-decoration: underline;
+	cursor: pointer;
+	color: #000;
+}
+.topicdescription .showdescedit {
+	display: none;
+	float: right;
+	font-size: 85%;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.topicdesceditfield textarea{
+	width: 600px;
+	height: 70px;
+	float: left;
+	font-size: 80%;
+	margin: 0 0 0 20px;
+}
+.topicdesceditfield {
+	margin: 4px 0 0 0;
+}
+.topicdescription:hover .showdescedit{
+	display: block;
+	color: #000;
+	margin: 3px 0 0 0;
+}
+.topicdescriptiontext {
+	font-size: 100%;
+	margin: 5px 0 14px 0;
+	padding: 0 0 5px 0;
+	color: #686868;
+}
+.topicdescriptiontext p {
+	margin: 0 0 0 0;
+	line-height: 15pt;
+}
+.canceltopicdescedit {
+	font-size: 85%;
+	cursor: pointer;
+}
+.showtopicoptions {
+	width: 125px;
+	float: left;
+	height: 40px;
+  padding: 0 5px 0 0;
+}
+.showmaintopicauthor {
+	display: none;
+}
+.showtopiceditform {
+	display: none;
+}
+.showsuggesttopiceditform {
+	display: none;
+}
+.topictitlecontainer {
+	float: center;
+	width: 465px;
+	min-height: 25px;
+  padding: 0 0 0 0;
+	margin: 0 0 0 117px;
+}
+.topictitlecontainer p {
+	margin: 0 auto;
+	font-size: 150%;
+	width: 418px;
+	text-align: center;
+	font-weight: bold;
+}
+.maintopicheader:hover .showmaintopicauthor {
+	display: block;
+	float: left;
+	min-width: 100px;
+	font-size: 75%;
+	color: #787878;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.showmaintopicauthor a:link {
+	color: #787878;
+}
+.showmaintopicauthor a:visited {
+	color: #787878;
+}
+.showtopicdelete {
+	display: none;
+}
+.showtopicdelete a:link {
+	color: #787878;
+}
+.showtopicdelete a:visited {
+	color: #787878;
+}
+.maintopicheader:hover .showtopicdelete {
+	display: block;
+	margin: 0 auto;
+	width: 74px;
+	font-size: 75%;
+	color: #787878;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.maintopicheader:hover .showtopiceditform {
+	display: block;
+	float: right;
+	width: 90px;
+	font-size: 75%;
+	color: #787878;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.maintopicheader:hover .showsuggesttopiceditform {
+	display: block;
+	float: right;
+	width: 138px;
+	font-size: 75%;
+	color: #787878;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.hidetopiceditform {
+	float: left;
+	width: 45px;
+}
+.rendertopicbookmark {
+	float: left;
+	min-width: 77px;
+	border: 1px solid #000;
+}
+.rendertopicdelete {
+	float: left;
+	width: 57px;
+	border: 1px solid #000;
+}
+.placeholderfordesc {
+	float: left;
+	width: 420px;
+	min-height: 20px;
+	margin: -1px 0 0 139px;
+}
+.backtonav {
+	min-height: 20px;
+}
+.backtonav p {
+	font-size: 90%;
+	margin: -6px 0 0 1px;
+	color: #606060;
+}
+.backtonav p a:link {
+	color: #888888;
+}
+.backtonav p a:visited {
+	color: #888888;
+}
+.topictags {
+	width: 155px;
+	float: left;
+	height: 55px;
+  padding: 0 5px 0 0;
+	border: 1px solid #000;
+}
+.topictags a {
+	border: 1px solid #000;
+	float: left;
+	padding: 1px 1px 1px 1px;
+}
+.topictags a:before {
+	content: '\2744';
+}
+/* Arg View */
+.argscontainer {
+	width: 692px;
+	min-height: 220px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0 0 30px 0;
+}
+.proargscontainer {
+	width: 340px;
+	min-height: 200px;
+	overflow: auto;
+	float: left;
+	padding: 0 0 5px 0;
+	margin: 5px 0 0 -2px;
+	border: 2px solid #fff;
+	border-bottom: none;
+}
+.proargscontainer:hover {
+	border: 2px solid #f0f0f0;
+	border-bottom: none;
+}
+.proargscontainer:hover .postnewproarg p{
+	display: block;
+}
+.proargscontainer:hover .showlowrankproargs p{
+	display: block;
+}
+.conargscontainer:hover .postnewconarg p{
+	display: block;
+}
+.conargscontainer:hover .showlowrankconargs p{
+	display: block;
+}
+.lowrankproargs {
+	display: block;
+}
+.lowrankconargs {
+	display: block;
+}
+.conargscontainer {
+	width: 340px;
+	min-height: 100px;
+	overflow: auto;
+	float: right;
+	padding: 0 0 5px 0;
+	margin: 5px -2px 0 0;
+	border: 2px solid #fff;
+  border-bottom: none;
+}
+.conargscontainer:hover {
+	border: 2px solid #f0f0f0;
+	border-bottom: none;
+}
+.argheader {
+	width: 320px;
+	min-height: 20px;
+	overflow: auto;
+	padding: 6px 0 11px 0;
+	margin: 0 auto;
+}
+.argheader p {
+	text-align: center;
+	margin: 0 0 0 0;
+	font-size: 120%;
+	font-weight: bold;
+}
+.editprofieldnamecontainer {
+	display: none;
+}
+.argheader:hover .editprofieldnamecontainer {
+	display: block;
+	min-width: 30px;
+	height: 12px;
+	padding: 0 0 0 0;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 80%;
+}
+.editconfieldnamecontainer {
+	display: none;
+}
+.argheader:hover .editconfieldnamecontainer {
+	display: block;
+	min-width: 30px;
+	height: 12px;
+	padding: 0 0 0 0;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 80%;
+}
+
+.topiceditformcontainer {
+	float: left;
+	width: 470px;
+}
+.topicsuggesteditformcontainer {
+	float: left;
+	width: 470px;
+}
+.topictitleeditfield textarea{
+	width: 365px;
+	height: 50px;
+	float: left;
+	font-size: 90%;
+	margin: 0 0 0 50px;
+	
+}
+.editprofieldnameform textarea {
+	width: 270px;
+	height: 30px;
+	float: left;
+	font-size: 85%;
+}
+.editconfieldnameform textarea {
+	width: 270px;
+	height: 30px;
+	float: left;
+	font-size: 85%;
+}
+.submitedit {
+	float: left;
+	margin: 0 0 0 0;
+}
+.canceltopicedit {
+	font-size: 85%;
+	cursor: pointer;
+}
+/* Topics within Arg View */
+.argtopicitem-odd {
+	min-height: 30px;
+	float: left;
+	background: #f8f8f8;
+	padding: 4px 0 0 0;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+.argtopicitem-even {
+	min-height: 30px;
+	float: left;
+	background: #f0f4fd;
+	padding: 4px 0 0 0;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+.argtopicheader {
+	width: 280px;
+	float: left;
+	margin: 0 5px 0 0;
+}
+.proscoredisplay {
+	float: right;
+	width: 28px;
+	text-align: center;
+	font-weight: bold;
+	margin: 7px 1px 0 1px;
+}
+.conscoredisplay {
+	float: left;
+	width: 28px;
+	text-align: center;
+	font-weight: bold;
+	margin: 7px 0 0 0;
+}
+.argtopicheader a {
+	color: #808080;
+}
+.argtopicheader a:link {
+	text-decoration: none;
+}
+.argtopicheader a:visited {
+	text-decoration: none;
+}
+.argtopicheader a:hover{
+	text-decoration: underline;
+	color: #000;
+}
+.preproargsymbol {
+	width: 8px;
+	font-size: 125%;
+	float: left;
+	margin: 0 1px 0 0;
+	height: 34px;
+}
+.preconargsymbol {
+	width: 8px;
+	font-size: 150%;
+	float: left;
+	margin: -2px 0 0 1px;
+	color: #fff;
+	height: 36px;
+}
+.upvotebutton {
+	float: left;
+}
+.downvotebutton {
+	margin: -2px 0 0 0;
+	float: left;
+}
+.provotingcontainer {
+	width: 15px;
+	height: 34px;
+	float: left;
+}
+.convotingcontainer {
+	width: 15px;
+	height: 34px;
+	float: left;
+	margin: 0 0 0 3px;
+}
+.miniprotopicoptions {
+	float: left;
+	width: 289px;
+	height: 12px;
+	margin: 2px 0 1px 9px;
+}
+.minicontopicoptions {
+	float: right;
+	width: 285px;
+	height: 12px;
+	margin: 2px 0 1px 1px;
+}
+.argtopicitem-odd:hover {
+	border-top: 1px solid #a0a0a0;
+	border-bottom: 1px solid #a0a0a0;
+}
+.argtopicitem-odd:hover .subtitletext a{
+	color: #000;
+}
+.argtopicitem-odd:hover .hiddenvotingcontainer {
+	display: block;
+	float: right;
+}
+.argtopicitem-odd:hover .showsubtopicauthor {
+	display: block;
+	float: right;
+	min-width: 70px;
+	font-size: 75%;
+	padding: 0 4px 0 0;
+	margin: 0 0 0 0;
+	color: #989898;
+}
+.argtopicitem-odd:hover .showsubtopicdelete {
+	display: block;
+	float: left;
+	min-width: 100px;
+	font-size: 75%;
+	margin: 0 0 0 0;
+}
+.argtopicitem-even:hover {
+	border-top: 1px solid #a0a0a0;
+	border-bottom: 1px solid #a0a0a0;
+}
+.argtopicitem-even:hover .subtitletext a{
+	color: #000;
+}
+.argtopicitem-even:hover .hiddenvotingcontainer {
+	display: block;
+	float: right;
+}
+.argtopicitem-even:hover .showsubtopicauthor {
+	display: block;
+	float: right;
+	min-width: 70px;
+	font-size: 75%;
+	padding: 0 4px 0 0;
+	margin: 0 0 0 0;
+	color: #989898;
+}
+.argtopicitem-even:hover .showsubtopicdelete {
+	display: block;
+	float: left;
+	min-width: 100px;
+	font-size: 75%;
+	margin: 0 0 0 0;
+}
+.hiddenvotingcontainer {
+	display: none;
+}
+.showsubtopicauthor {
+	display: none;
+}
+.showsubtopicdelete {
+	display: none;
+}
+.showsubtopicauthor a:link {
+	color: #989898;
+}
+.showsubtopicauthor a:visited {
+	color: #989898;
+}
+.showsubtopicdelete a:link {
+	color: #989898;
+}
+.showsubtopicdelete a:visited {
+	color: #989898;
+}
+.subtitletext {
+	float: left;
+	margin: 0 0 0 0;
+	font-size: 95%;
+}
+.highrankproargs {
+	float: left;
+}
+.showlowrankproargs {
+	float: left;
+	margin: 7px 2px 3px 2px;
+	width: 150px;
+	font-size: 85%;	
+	height: 11px;
+}
+.showlowrankproargs p {
+	display: none;
+	float: left;
+	margin: 0 0 0 0;
+	color: #808080;
+	cursor: pointer;
+}
+.dark {
+	color: #606060;
+}
+.hidelowrankproargs {
+	float: left;
+	width: 150px;
+	margin: 7px 0 3px 2px;
+}
+.hidelowrankproargs p {
+	float: left;
+	margin: 0 0 0 0;
+	font-size: 85%;
+	color: #808080;
+	cursor: pointer;
+}
+.newproarg {
+	display: block;
+	float: left;
+	width: 340px;
+	margin: 1px 2px 0 0;
+}
+.newproarg a {
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.postnewproarg {
+	float: right;
+	margin: 7px 2px 0 0;
+	width: 150px;
+	font-size: 85%;
+	color: #808080;
+}
+.postnewproarg p {
+	display: none;
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.hidenewproarg {
+	float: right;
+	font-size: 85%;
+	margin: 7px 2px 0 0;
+	color: #808080;
+}
+.hidenewproarg p {
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.highrankconargs {
+	float: left;
+}
+.showlowrankconargs {
+	float: left;
+	margin: 7px 2px 3px 2px;
+	width: 150px;
+	font-size: 85%;
+	height: 11px;	
+}
+.showlowrankconargs p {
+	display: none;
+	float: left;
+	margin: 0 0 0 0;
+	color: #808080;
+	cursor: pointer;
+}
+.dark {
+	color: #606060;
+}
+.hidelowrankconargs {
+	float: left;
+	width: 150px;
+	margin: 7px 0 3px 2px;
+}
+.hidelowrankconargs p {
+	float: left;
+	margin: 0 0 0 0;
+	font-size: 85%;
+	color: #a0a0a0;
+	cursor: pointer;
+}
+.newconarg {
+	float: left;
+	width: 340px;
+	margin: 1px 2px 0 0;
+}
+.newconarg a {
+	margin: 0 0 0 0;
+	display: block;
+	cursor: pointer;
+}
+.postnewconarg {
+	float: right;
+	margin: 7px 2px 0 0;
+	width: 150px;
+	font-size: 85%;
+	color: #808080;
+}
+.postnewconarg p {
+	display: none;
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.hidenewconarg {
+	float: right;
+	font-size: 85%;
+	margin: 7px 2px 0 0;
+	color: #808080;
+}
+.hidenewconarg p {
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.argformfield textarea{
+	width: 330px;
+}
+.argformsubmit {
+	float: right;
+}
+.commentscontainer {
+	float: left;
+	width: 692px;
+	min-height: 100px;
+	margin: 0 0 0 3px;
+	padding: 15px 0 0 0;
+	border-top: 2px solid #fff;
+}
+.procommentscontainer:hover .commentheader {
+	color: #000;
+}
+.concommentscontainer:hover .commentheader {
+	color: #000;
+}
+.procommentscontainer {
+	width: 340px;
+	min-height: 50px;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 10px 0 0 0;
+	border: 1px solid #fff;
+}
+.procommentscontainer:hover {
+	border-top: 1px solid #f0f0f0;
+	border-right: 1px solid #f0f0f0;
+}
+.concommentscontainer {
+	width: 340px;
+	min-height: 50px;
+	float: right;
+	margin: 0 0 0 5px;
+	padding: 10px 0 0 0;
+	border: 1px solid #fff;
+}
+.concommentscontainer:hover {
+	border-top: 1px solid #f0f0f0;
+	border-left: 1px solid #f0f0f0;
+}
+.commentheader {
+	width: 320px;
+	min-height: 20px;
+	padding: 5px 0 5px 0;
+	margin: 0 auto;
+	color: #a0a0a0;
+}
+.commentheader p {
+	text-align: center;
+	margin: 0 0 0 0;
+	font-size: 95%;
+	font-weight: bold;
+}
+.hiddencommentvotingcontainer {
+	display: none;
+}
+.commentitem-odd {
+	min-height: 30px;
+	float: left;
+	padding: 5px 0 0 0;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	background: #f8f8f8;
+	color: #a0a0a0;
+}
+.commentitem-odd:hover .hiddencommentvotingcontainer {
+	display: block;
+	float: right;
+}
+.commentitem-odd:hover {
+	min-height: 30px;
+	float: left;
+	border-top: 1px solid #a0a0a0;
+	border-bottom: 1px solid #a0a0a0;
+	color: #000;
+}
+.commentitem-even {
+	min-height: 30px;
+	float: left;
+	padding: 5px 0 0 0;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	background: #fffffa;
+	color: #a0a0a0;
+}
+.commentitem-even:hover {
+	min-height: 30px;
+	float: left;
+	border-top: 1px solid #a0a0a0;
+	border-bottom: 1px solid #a0a0a0;
+	color: #000;
+}
+.commentitem-even:hover .hiddencommentvotingcontainer {
+	display: block;
+	float: right;
+}
+.procommentscoredisplay {
+	float: right;
+	width: 22px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 90%;
+	margin: 7px 1px 0 0;
+}
+.concommentscoredisplay {
+	float: left;
+	width: 28px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 90%;
+	margin: 7px 0 0 0;
+}
+.preprocommentsymbol {
+	width: 8px;
+	font-size: 100%;
+	float: left;
+	margin: 0 1px 0 0;
+	height: 34px;
+}
+.preconcommentsymbol {
+	width: 8px;
+	font-size: 150%;
+	float: left;
+	margin: -2px 0 0 1px;
+	color: #fff;
+	height: 36px;
+}
+.commenttitlecontainer {
+	width: 286px;
+	float: left;
+}
+.commenttitletext {
+	float: left;
+	margin: 0 0 0 0;
+	font-size: 90%;
+	width: 286px;
+}
+.procommentvotingcontainer {
+	width: 13px;
+	height: 34px;
+	float: left;
+	margin: 0 0 0 3px;
+}
+.concommentvotingcontainer {
+	width: 13px;
+	height: 34px;
+	float: left;
+}
+.miniprocommentoptions {
+	float: left;
+	width: 293px;
+	height: 12px;
+	margin: 2px 0 1px 9px;
+}
+.miniconcommentoptions {
+	float: right;
+	width: 290px;
+	height: 12px;
+	margin: 2px 0 1px 3px;
+}
+.commentitem-odd:hover .showcommentauthor {
+	display: block;
+	float: right;
+	min-width: 70px;
+	font-size: 75%;
+	padding: 0 4px 0 0;
+	margin: 0 0 0 0;
+	color: #989898;
+}
+.commentitem-even:hover .showcommentauthor {
+	display: block;
+	float: right;
+	min-width: 70px;
+	font-size: 75%;
+	padding: 0 4px 0 0;
+	margin: 0 0 0 0;
+	color: #989898;
+}
+.commentitem-odd:hover .showcommentdelete {
+	display: block;
+	float: left;
+	min-width: 50px;
+	font-size: 75%;
+	margin: 0 0 0 0;
+}
+.commentitem-odd:hover .showcommentedit {
+	display: block;
+	float: left;
+	min-width: 50px;
+	font-size: 75%;
+	margin: 0 0 0 0;
+}
+.commentitem-even:hover .showcommentdelete {
+	display: block;
+	float: left;
+	min-width: 50px;
+	font-size: 75%;
+	margin: 0 0 0 0;
+}
+.commentitem-even:hover .showcommentedit {
+	display: block;
+	float: left;
+	min-width: 50px;
+	font-size: 75%;
+	margin: 0 0 0 0;
+}
+.showcommentauthor {
+	display: none;
+}
+.showcommentdelete {
+	display: none;
+}
+.showcommentedit {
+	display: none;
+}
+.showcommentauthor a:link {
+	color: #989898;
+}
+.showcommentauthor a:visited {
+	color: #989898;
+}
+.showcommentdelete a:link {
+	color: #989898;
+}
+.showcommentdelete a:visited {
+	color: #989898;
+}
+.showcommentedit a:link {
+	color: #989898;
+}
+.showcommentedit a:visited {
+	color: #989898;
+}
+.newprocomment {
+	float: left;
+	width: 340px;
+	margin: 1px 2px 0 0;
+}
+.newprocomment a {
+	margin: 0 0 0 0;
+	display: block;
+	cursor: pointer;
+}
+.postnewprocomment {
+	float: right;
+	margin: 7px 2px 0 0;
+	width: 180px;
+	font-size: 80%;
+	color: #808080;
+}
+.postnewconcomment p {
+	display: none;
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.postnewconcomment {
+	float: right;
+	margin: 7px 2px 0 0;
+	width: 180px;
+	font-size: 80%;
+	color: #808080;
+}
+.postnewprocomment p {
+	display: none;
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.hidenewprocomment {
+	float: right;
+	font-size: 80%;
+	margin: 7px 2px 0 0;
+	width: 180px;
+	color: #808080;
+}
+.hidenewprocomment p {
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.hidenewconcomment {
+	float: right;
+	font-size: 80%;
+	margin: 7px 2px 0 0;
+	width: 180px;
+	color: #808080;
+}
+.hidenewconcomment p {
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.commentformfield textarea{
+	width: 330px;
+}
+.commentformsubmit {
+	float: right;
+}
+.newconcomment {
+	float: left;
+	width: 340px;
+	margin: 1px 2px 0 0;
+}
+.newconcomment a {
+	margin: 0 0 0 0;
+	display: block;
+	cursor: pointer;
+}
+.postnewprocomment {
+	float: right;
+	margin: 7px 2px 0 0;
+	width: 180px;
+	font-size: 80%;
+	color: #808080;
+}
+.postnewprocomment p {
+	display: none;
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.hidenewprocomment {
+	float: right;
+	font-size: 80%;
+	margin: 7px 2px 0 0;
+	width: 180px;
+	color: #808080;
+}
+.hidenewprocomment p {
+	float: right;
+	margin: 0 0 0 0;
+	cursor: pointer;
+}
+.showlowrankprocomments {
+	float: left;
+	width: 150px;
+	font-size: 80%;	
+	height: 20px;
+}
+.showlowrankprocomments p {
+	display: none;
+	float: left;
+	margin: 7px 0 5px 0;
+	color: #808080;
+	cursor: pointer;
+}
+.procommentscontainer:hover .showlowrankprocomments p{
+	display: block;
+}
+.concommentscontainer:hover .showlowrankconcomments p{
+	display: block;
+}
+.hidelowrankprocomments {
+	float: left;
+	width: 150px;
+	font-size: 80%;	
+	height: 13px;
+	margin: 0 0 12px 0;
+}
+.hidelowrankprocomments p {
+	float: left;
+	margin: 7px 0 5px 0;
+	color: #a0a0a0;
+	cursor: pointer;
+}
+.showlowrankconcomments {
+	float: left;
+	width: 150px;
+	font-size: 80%;	
+	height: 20px;
+}
+.showlowrankconcomments p {
+	display: none;
+	float: left;
+	margin: 7px 0 5px 0;
+	color: #808080;
+	cursor: pointer;
+}
+.hidelowrankconcomments {
+	float: left;
+	width: 150px;
+	font-size: 80%;	
+	height: 13px;
+	margin: 0 0 12px 0;
+}
+.hidelowrankconcomments p {
+	float: left;
+	margin: 7px 0 5px 0;
+	color: #a0a0a0;
+	cursor: pointer;
+}
+.procommentscontainer:hover .postnewprocomment p{
+	display: block;
+}
+.concommentscontainer:hover .postnewconcomment p{
+	display: block;
+}
+.procommentscontainer:hover .showlowrankproargs p{
+	display: block;
+}
+.concommentscontainer:hover .postnewconarg p{
+	display: block;
+}
+.concommentscontainer:hover .showlowrankconargs p{
+	display: block;
+}
+.maintopicsidebar {
+	float: left;
+	margin: 3px;
+	width: 264px;
+	padding: 0 0 250px 0;
+}
+.maintopicsidebar:hover {
+	background: #fffffa;
+}
+.suggestioncontainer {
+	margin: 120px 0 0 0;
+}
+.suggestionitem {
+	margin: 20px 0 0 0;
+	font-size: 90%;
+	font-weight: bold;
+}
+.suggestionitem a:link {
+	color: #808080;
+	text-decoration: none;
+}
+.suggestionitem a:visited {
+	color: #808080;
+	text-decoration: none;
+}
+.suggestionitem a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+/* Misc */
+.bookmark-odd a {
+	color: #dca4ac;
+}
+.bookmark-odd a:link {
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spacer {
+	margin: 500px 0 0 0;
+}
+
+
+
+/* dur */

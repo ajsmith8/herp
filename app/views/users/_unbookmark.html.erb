@@ -1,0 +1,4 @@
+<%= form_for current_user.bookmarks.find_by_topic_id(@topic.id), 
+  html: { method: :delete }, remote: true do |f| %>
+  <div class="actions"><%= f.submit "Unbookmark" %></div>
+<% end %>

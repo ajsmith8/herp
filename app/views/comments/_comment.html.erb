@@ -1,0 +1,56 @@
+<% @comment = comment %>
+<% if comment.ispro? %>
+	<div class = "preconcommentsymbol">  </div>
+	<div class="commenttitlecontainer">
+		<p class = "commenttitletext"><%= comment.content %></p>
+	</div>
+<% else %>
+	<div class="concommentscoredisplay">
+		<span id="commentscoring_<%= comment.id%>" class="stat"> 
+			<%= comment.score %>
+	  </span>
+	</div>
+<% end %>
+
+<% if comment.ispro? %>	
+	<div class="procommentvotingcontainer">
+<% else  %>
+	<div class="concommentvotingcontainer">
+<% end %>
+<% unless current_user.nil? %>
+	<div class = "hiddencommentvotingcontainer">	
+		<%= render 'shared/upvote_comment_form'%>
+		<%= render 'shared/downvote_comment_form'%>
+	</div>
+<% end %>
+</div>
+
+<% if !comment.ispro? %>
+	<div class = "preconcommentsymbol">  </div>
+	<div class="commenttitlecontainer">
+		<p class = "commenttitletext"><%= comment.content %></p>
+	</div>
+<% end %>
+
+<% if comment.ispro? %>
+	<div class="procommentscoredisplay">
+		<span id="commentscoring_<%= comment.id%>" class="stat"> 
+			<%= comment.score %>
+	  </span>
+	</div>
+<% end %>
+
+<% if comment.ispro? %>
+	<div class = "miniprocommentoptions">
+<% else %>
+	<div class = "miniconcommentoptions">
+<% end %>
+		<% subauthor = User.find_by_id(comment.user_id)%>
+		<p class = "showcommentauthor"><b>Posted by: <u></b><%=link_to subauthor.name, subauthor %></u></p>
+		<% if signed_in? %>	
+			<% if current_user.admin? || current_user.id == @comment.user_id %>
+				<p class = "showcommentedit"><b><u><%=link_to "Edit", edit_comment_path(@comment)%></u></b></p>
+				<p class = "showcommentdelete"><b><u><%=link_to "Delete", comment, method: :delete, confirm: "You sure?", title: comment.content %></u></b></p>
+			<% end %>
+		<% end %>	
+		</div>

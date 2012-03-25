@@ -1,0 +1,57 @@
+<% @subtopic = topic %>
+<% if topic.ispro? %>
+	<div class = "preconargsymbol">  </div>
+	<div class="argtopicheader">
+		<p class = "subtitletext"><%= link_to topic.content, topic %></p>
+	</div>
+<% else %>
+	<div class="conscoredisplay">
+		<span id="scoring_<%= topic.id%>" class="stat"> 
+			<%= topic.score %>
+	  </span>
+	</div>
+<% end %>
+
+<% if @showoptions == true %>
+	<% if topic.ispro? %>	
+		<div class="provotingcontainer">
+	<% else  %>
+		<div class="convotingcontainer">
+	<% end %>
+			<% unless current_user.nil? %>
+				<div class = "hiddenvotingcontainer">
+					<%= render 'shared/upvote_form'%>
+					<%= render 'shared/downvote_form'%>
+				</div>
+			<% end %>
+		</div>
+<% end %>
+
+<% if !topic.ispro? %>
+	<div class = "preconargsymbol">  </div>
+	<div class="argtopicheader">
+		<p class = "subtitletext"><%= link_to topic.content, topic %> </p>
+	</div>
+<% end %>
+
+<% if topic.ispro? %>
+	<div class="proscoredisplay">
+		<span id="scoring_<%= topic.id%>" class="stat"> 
+			<%= topic.score %>
+	  </span>
+	</div>
+<% end %>
+
+<% if topic.ispro? %>
+	<div class = "miniprotopicoptions">
+<% else %>
+	<div class = "minicontopicoptions">
+<% end %>
+		<% subauthor = User.find_by_id(topic.user_id)%>
+		<p class = "showsubtopicauthor"><b>Posted by: <u></b><%=link_to subauthor.name, subauthor %></u></p>
+		<% if signed_in? %>	
+			<% if current_user.admin? || (current_user.id == @topic.user_id && @topic.children.empty?) %>
+				<p class = "showsubtopicdelete"><b><u><%=link_to "Delete Topic", topic, method: :delete, confirm: "You sure?", title: topic.content %></u></b></p>
+			<% end %>
+		<% end %>
+</div>

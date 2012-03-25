@@ -1,0 +1,16 @@
+<%= form_for @newtopic do |f| %>
+  <div class="argformfield">
+		<%= f.hidden_field :parent_id %>
+    <%= f.text_area :content, :rows => 2 %>
+  </div>
+  <div class="field">  
+	<%= f.hidden_field :ispro, value: true %>
+	<%= f.hidden_field :pro_fieldname, value: "Supporting Reasons:" %>
+	<%= f.hidden_field :con_fieldname, value: "Opposing Reasons:" %>  
+  </div>
+
+  <div class="argformsubmit">	   
+		<%= f.submit "Submit" %>	
+  </div>
+
+<% end %>
